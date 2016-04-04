@@ -1,2 +1,3 @@
 # google-pagination
-a JavaScript pagination component, google style.
+A JavaScript pagination component, google style.
+Written in Vanilla JS, without any third-party dependency.
