@@ -52,8 +52,9 @@
                 end = Math.min(config.pageSize, config.totalPages);
             }else{
                 //render Sibling pages from Current page
-               start = config.currentPageNumber - Math.floor(config.pageSize / 2);
-               end = Math.min(config.currentPageNumber + Math.round(config.pageSize / 2) - 1, config.totalPages);
+                end = Math.min(config.currentPageNumber + Math.round(config.pageSize / 2) - 1, config.totalPages);
+                start = config.currentPageNumber - Math.floor(config.pageSize / 2);
+                start = Math.min(start, end - config.pageSize + 1);
             }
             for(var i = start; i <= end; i++){
                 pages.push(template('<li><a href="{{url}}" class="{{current}}">{{page}}</a></li>', {
