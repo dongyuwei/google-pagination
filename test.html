@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test pagination</title>
+    <style>
+        .pagination{
+            overflow: hidden;
+        }
+
+        .pagination, li{
+            list-style: none;
+        }
+        
+        .pagination > li{
+            float: left;
+        }
+
+        .pagination > li .current{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        test pagination, you can custom the css style of the pagination.
+    </h1>
+    <div id="pagination-container-1"></div>
+    <div id="pagination-container-2"></div>
+    <div id="pagination-container-3"></div>
+
+    <script src='./pagination.js'></script>
+    <script>
+        function renderPagination(currentPageNumber){
+            var pagination = new window.Pagination({
+                baseUrl: 'http://erlang.us/posts/',
+                totalPages: 30,
+                currentPageNumber: currentPageNumber,
+                pageSize: 10
+            });
+
+            return pagination.toHTML();
+        }
+
+        document.getElementById('pagination-container-1').innerHTML = renderPagination(1);
+        document.getElementById('pagination-container-2').innerHTML = renderPagination(5);
+        document.getElementById('pagination-container-3').innerHTML = renderPagination(30);
+    </script>
+</body>
+</html>
