@@ -1,9 +1,9 @@
 # google-pagination
-A JavaScript pagination component, google style.
+A JavaScript pagination component, which behaves like Google search web pagination.
 
 Written in Vanilla JS, without any third-party dependency.
 
-##usage(see the [test.html](https://github.com/dongyuwei/google-pagination/blob/master/test.html) ): 
+## Usage(see the [test.html](https://github.com/dongyuwei/google-pagination/blob/master/test.html) ): 
 
 ```js
 var pagination = new window.Pagination({
